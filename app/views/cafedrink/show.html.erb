@@ -1,0 +1,39 @@
+<div class="box1">
+  <img class="post_image" src="<%= @cafedrink.image %>">
+    <% if user_signed_in? && current_user.id == @cafedrink.user_id %>
+        <ul class="more_list">
+          <li>
+            <%= link_to '編集', "/cafedrink/#{@cafedrink.id}/edit",method: :get %>
+          </li>
+            <li>
+              <%= link_to '削除', "/cafedrink/#{@cafedrink.id}",method: :delete %>
+            </li>
+          </ul>
+    <% end %>
+      <ul class="content">
+        <li class="memo">
+          <%= @cafedrink.memo %>
+        </li>
+        <li class="nickname">
+          投稿者<%= @cafedrink.user.nickname %>
+        </li>
+      </ul>
+</div>
+
+<div class="box2">
+    <ul class="more-content">
+      <li class="name">
+        商品名:<%= @cafedrink.name %>
+      </li>
+       <li class="price">
+        価格:<%= @cafedrink.price %>円
+      </li>
+      <li class="place">
+        購入店:<%= @cafedrink.place %>
+      </li>
+      <li class="star">
+        評価:<%= @cafedrink.star %>
+      </li>
+
+    </ul>
+</div>

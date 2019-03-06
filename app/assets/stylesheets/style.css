@@ -1,0 +1,199 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  min-height: 100%;
+  background-image:url(http://image.space.rakuten.co.jp/lg01/14/0000091114/27/imgc2ebd80dzik6zj.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+h2,h3 {
+  color: white;
+  text-align: center;
+}
+
+em {
+  color: white;
+}
+
+label {
+  color: white;
+  margin: 0 auto;
+}
+
+input {
+  color: white;
+  background-color: gray;
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.user_nav {
+  text-align: right;
+}
+
+.brand-logo {
+  padding-left: 20px;
+}
+
+.contents {
+  margin: 0 auto;
+}
+
+.box1 {
+  width: 400px;
+  height: 400px;
+  margin:2em auto;
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-top: solid 2px #A1887F;
+    border-bottom: solid 2px #A1887F;
+}
+
+.box1:before, .box1:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: #A1887F;
+}
+.box1:before {left: 10px;}
+.box1:after {right: 10px;}
+.box1 p {
+    margin: 0;
+    padding: 0;
+}
+
+.box2 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    border: solid 3px #A1887F;
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: rgba(255,255,255);
+    opacity: 0.5;
+}
+.more-content {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.post_image {
+  display: block;
+  padding: 10px;
+  position: relative;
+  margin: 0 auto;
+  width: 330px;
+  height: 330px;
+}
+
+.more_list {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  color: white;
+}
+
+.memo {
+  font-size: 40px;
+  color: white;
+  position: absolute;
+  bottom: 60px;
+  left: 50px;
+}
+
+name,place {
+  font-size: 10px;
+  color:#AD999F;
+}
+
+.nickname {
+  font-size: 10px;
+  color:#AD999F;
+  position: absolute;
+  bottom: 3px;
+  right: 20px;
+}
+
+.content-wrapper {
+  padding: 10px;
+  font-size: 10px;
+  margin: 0 auto;
+}
+
+.content {
+  text-align: left;
+  color: white;
+}
+
+.field{
+  width: 50%;
+  margin:0 auto;
+}
+
+
+
+.btn-wrapper {
+  margin:0 auto;
+  width: 105px;
+  height: 25px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0px;
+  left: 283px;
+}
+
+.waves-effect{
+  display: block;
+  margin: 0 auto;
+}
+
+.btn {
+  border-radius: 1px;
+  background-color:#ABA333;
+  height:30px;
+  width: 200px;
+  font-size: 80%;
+}
+
+.return {
+  display: block;
+  margin: 0 auto;
+  font-size: 10px;
+}
+
+.btn:hover {
+  background-color: gray;
+}
+
+.post-btn {
+  color: black;
+}
+
+.form-wrapper {
+    padding-top: 150px;
+    margin: 0 auto;
+    width: 680px;
+}
+
+.copyright {
+  text-align: right;
+  padding-right: 20px;
+}

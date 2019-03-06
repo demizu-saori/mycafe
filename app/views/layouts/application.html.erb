@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cafestagram</title>
+    <style type="text/css" href="./style.css"></style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+          <div class="nav-wrapper brown lighten-2">
+            <a href="/cafedrink" class="brand-logo">CAFE RECORD</a>
+              <% if user_signed_in? %>
+                <div class="user_nav"><%= current_user.nickname %>さん
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/users/<%= current_user.id %>">マイページ</a></li>
+                    <li><%= link_to "ログアウト", destroy_user_session_path, method: 'delete' %></li>
+                    <li><a class="post right" href="/cafedrink/new">投稿する</a></li>
+                  </ul>
+                </div>
+              <% else %>
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><%= link_to "ログイン", new_user_session_path, class: 'post' %></li>
+                    <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li>
+                  </ul>
+              <% end -%>
+          </div>
+      </nav>
+    </div>
+
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+
+                  <footer>
+                    <div class="footer-copyright col l6 s12 brown lighten-2">
+                      <div class="copyright">
+                      © 2019 Copyright Saori Demizu
+                      </div>
+                    </div>
+                  </footer>
+</html>

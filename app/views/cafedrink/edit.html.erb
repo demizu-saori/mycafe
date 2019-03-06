@@ -1,0 +1,20 @@
+<%= form_for @cafedrink, :url => {:action => 'update'} do |f| %>
+  <div class="form-wrapper">
+    <h2>編集する</h2>
+        <div class="form">
+        <%= f.label :name, "商品名" %><br>
+          <%= f.text_field :name %>
+        <%= f.label :price, "価格" %><br>
+          <%= f.text_field  :price %>
+        <%= f.label :place, "購入店" %><br>
+          <%= f.text_field :place %>
+        <%= f.label :image, "画像" %><br>
+          <%= f.text_field :image %>
+        <%= f.label :memo, "メモ" %><br>
+          <%= f.text_field :memo %>
+        <%= f.label :star, "評価" %><br>
+          <%= f.text_field :star %>
+        <%=f.submit method: "patch" '再投稿'%>
+      </div>
+  </div>
+<% end %>

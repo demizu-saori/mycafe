@@ -1,0 +1,9 @@
+<div class="contents row">
+  <h2><%= @nickname %>さんの投稿一覧</h2>
+<% @cafedrinks.each do |cafedrink| %>
+    <%= render partial: "cafedrink/cafedrink",locals: { cafedrink: cafedrink } %>
+<% end %>
+  <%= paginate(@cafedrinks) %>
+
+  <script type="text/javascript" src="./app.js"></script>
+</div>
