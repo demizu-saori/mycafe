@@ -112,7 +112,8 @@ footer {
 }
 
 .memo {
-  font-size: 40px;
+  font-size: 23px;
+  width:314px;
   color: white;
   position: absolute;
   bottom: 60px;
